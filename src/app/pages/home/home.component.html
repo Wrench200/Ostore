@@ -1,0 +1,107 @@
+<section class=" bg-banner1 bg-cover bg-blend-darken md:h-[70dvh] bg-black bg-opacity-40 bg-center">
+
+    <div
+        class="relative mx-auto container px-4 py-32 sm:px-6 h-full md:flex md:items-center md:justify-start justify-center md:px-8">
+        <div
+            class="w-full text-center flex flex-col justify-center items-center md:items-start md:text-left text-white ltr:sm:text-left rtl:sm:text-right">
+            <h1 class=" text-5xl sm:text-6xl sm:flex text-center  font-extrabold items-center lg:text-8xl">
+                Welcome to
+
+                <p class="block font-extrabold ml-3 text-rose-600 ">Ostore</p>
+            </h1>
+
+            <p class="mt-4 w-full md:max-w-lg text-2xl/relaxed">
+                Find the latest phones, laptops, and accessories at unbeatable prices.
+            </p>
+
+            <div class="mt-8 flex flex-wrap md:justify-start justify-center gap-4 text-center">
+                <a href="#"
+                    class="block  rounded bg-rose-600 px-8 md:px-12 py-3 text-md font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-fit">
+                    Shop now
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container  mx-auto   py-16">
+    <div class=" grid items-center  grid-cols-1 lg:grid-cols-3 gap-6 md:gap-2 justify-center">
+        <div class=" rounded-lg px-3 py-6 flex lg:flex-col justify-center items-center gap-5">
+            <img src="assets/MacBook Pro.png" alt="Delivery" class=" w-32 h-32 sm:w-44 sm:h-44 object-contain">
+            <div class="lg:px-10 sm:px-8">
+                <h2 class="font-medium capitalize text-xl">Top-notch Laptops</h2>
+                <p class="text-gray-500 ">Power up your gaming or boost your productivity with our premium selection </p>
+            </div>
+        </div>
+        <div class=" rounded-lg px-3 py-6 flex flex-row  lg:flex-col-reverse   justify-center items-center gap-5">
+            <div class="lg:px-10 sm:px-8">
+                <h4 class="font-medium capitalize text-xl">Smart Phones</h4>
+                <p class="text-gray-500 ">From Pixels to IPhones to Samsungs we've got the perfect phone for you </p>
+            </div>
+            <img src="assets/phone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
+        </div>
+        <div class=" rounded-lg px-3 py-6 flex lg:flex-col flex-row justify-center items-center gap-5">
+            <img src="assets/headphone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
+            <div class="lg:px-10 sm:px-8">
+                <h4 class="font-medium capitalize text-xl">Top-tier accesories</h4>
+                <p class="text-gray-500 ">From chargers to headphones and much more we've got you covered.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card container mx-auto">
+    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions"  [circular]="true" >
+        <ng-template pTemplate="header">
+            <p>Header content</p>
+        </ng-template>
+        <ng-template let-product pTemplate="item">
+            <div class="group  flex items-center w-full  flex-col overflow-hidden ">
+                <a class="relative flex  h-80 w-72 overflow-hidden" href="#">
+                    <img class="absolute top-0 right-0 h-full w-full object-cover"
+                        src="https://images.unsplash.com/photo-1578996953841-b187dbe4bc8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJsYXplcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="product image" />
+                    <div class="absolute bottom-0 mb-4 flex w-full justify-center space-x-4">
+                        <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
+                        <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                        <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>
+                    </div>
+                    <div
+                        class="absolute lg:-right-16 bottom-0 mr-5 mb-4 space-y-2 transition-all duration-300 right-0  lg:group-hover:right-0">
+                        <a
+                            class="flex h-10 w-10 items-center justify-center shadow-sm glass rounded-full text-white transition hover:text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a
+                            class="flex h-10 w-10 items-center rounded-full shadow-sm justify-center glass text-white transition hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </a>
+                <div class="mt-4 pb-5 ">
+                    <a href="#">
+                        <h5 class="text-center tracking-tight text-gray-500 dark:text-white">{{product.name}}</h5>
+                    </a>
+                    <div class="mb-5 flex justify-center">
+                        <p>
+                            <span class="text-lg font-bold text-gray-900 dark:text-white">{{'$' + product.price}}</span>
+            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p>Footer content</p>
+        </ng-template>
+    </p-carousel>
+</div>
+
