@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
+import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 import { Product } from '../../Interfaces/Product';
 import { APIService } from '../../Services/api.service';
-import { ImportsModule } from '../../Primeng';
+import { CommonModule } from '@angular/common';
+import { NoopAnimationPlayer } from '@angular/animations';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ImportsModule],
+  imports: [CommonModule, CarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  products!: Product[] ;
+  products!: Product[];
 
   responsiveOptions: any[] | undefined;
 
@@ -22,39 +24,33 @@ export class HomeComponent implements OnInit {
       this.products = products;
     });
 
-    this.responsiveOptions = [
-      {
-        breakpoint: '1024px',
-        numVisible: 3,
-        numScroll: 1
-      },
-      {
-        breakpoint: '768px',
-        numVisible: 2,
-        numScroll: 1
-      },
-      {
-        breakpoint: '640px',
-        numVisible: 1,
-        numScroll: 1
-      },
-      {
-        breakpoint: '320px',
-        numVisible: 2,
-        numScroll: 1
-      }
-    ];
+   
   }
 
-  // getSeverity(status: string) {
-  //   switch (status) {
-  //     case 'INSTOCK':
-  //       return 'success';
-  //     case 'LOWSTOCK':
-  //       return 'warning';
-  //     case 'OUTOFSTOCK':
-  //       return 'danger';
-  //   }
-    
-  // }
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: true,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['prev', 'next'],
+    responsive: {
+      0: {
+        items: 1,
+        dots: true
+      },
+      426: {
+        items: 2
+      },
+      769: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: false
+  }
+
 }
