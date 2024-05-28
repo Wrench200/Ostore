@@ -4,7 +4,7 @@ import { Product } from '../../Interfaces/Product';
 import { APIService } from '../../Services/api.service';
 import { CommonModule } from '@angular/common';
 import { NoopAnimationPlayer } from '@angular/animations';
-
+import { FooterComponent } from '../../Components/footer/footer.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -31,8 +31,8 @@ export class HomeComponent implements OnInit {
     loop: true,
     mouseDrag: false,
     touchDrag: true,
-    pullDrag: false,
-    dots: false,
+    pullDrag: true,
+    dots:false,
     navSpeed: 700,
     navText: ['prev', 'next'],
     responsive: {
@@ -41,13 +41,16 @@ export class HomeComponent implements OnInit {
         dots: true
       },
       426: {
-        items: 2
+        items: 2,
+        dots: true
       },
       769: {
-        items: 3
+        items: 3,
+        dots:true
       },
       940: {
-        items: 4
+        items: 4,
+        dots:false
       }
     },
     nav: false

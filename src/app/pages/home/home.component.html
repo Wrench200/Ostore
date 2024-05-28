@@ -4,7 +4,7 @@
         class="relative mx-auto container px-4 py-32 sm:px-6 h-full md:flex md:items-center md:justify-start justify-center md:px-8 animation-duration-1000 animation-ease-in-out">
         <div
             class="w-full text-center flex flex-col justify-center items-center md:items-start md:text-left text-white ltr:sm:text-left rtl:sm:text-right">
-            <h1 class=" text-5xl sm:text-6xl sm:flex text-center  font-extrabold items-center lg:text-7xl">
+            <h1 class="flex text-3xl sm:text-6xl  text-center  font-extrabold items-center lg:text-7xl">
                 Welcome to
 
                 <p class="block font-extrabold ml-3 text-rose-600 ">Ostore</p>
@@ -16,8 +16,10 @@
 
             <div class="mt-8 flex flex-wrap md:justify-start justify-center gap-4 text-center">
                 <a href="#"
-                    class="block  rounded bg-rose-600 px-8 md:px-12 py-3 text-md font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-fit">
-                    Shop now
+                    class="mt-6 inline-flex shrink-0 items-center gap-2 bg-rose-600 rounded-full border border-rose-600 hover:border-white px-5 py-3 text-white transition hover:bg-white hover:text-slate-800 md:mt-0">
+                    <span class="font-medium"> Shop Now </span>
+                
+                    
                 </a>
 
 
@@ -30,13 +32,13 @@
         <div class=" rounded-lg px-3 py-6 flex lg:flex-col justify-center items-center gap-5">
             <img src="assets/MacBook Pro.png" alt="Delivery" class=" w-32 h-32 sm:w-44 sm:h-44 object-contain">
             <div class="lg:px-10 sm:px-8">
-                <h2 class="font-medium capitalize text-xl">Top-notch Laptops</h2>
+                <h2 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Top-notch Laptops</h2>
                 <p class="text-gray-500 ">Power up your gaming or boost your productivity with our premium selection </p>
             </div>
         </div>
         <div class=" rounded-lg px-3 py-6 flex flex-row  lg:flex-col-reverse   justify-center items-center gap-5">
             <div class="lg:px-10 sm:px-8">
-                <h4 class="font-medium capitalize text-xl">Smart Phones</h4>
+                <h4 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Smart Phones</h4>
                 <p class="text-gray-500 ">From Pixels to IPhones to Samsungs we've got the perfect phone for you </p>
             </div>
             <img src="assets/phone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
@@ -44,21 +46,21 @@
         <div class=" rounded-lg px-3 py-6 flex lg:flex-col flex-row justify-center items-center gap-5">
             <img src="assets/headphone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
             <div class="lg:px-10 sm:px-8">
-                <h4 class="font-medium capitalize text-xl">Top-tier accesories</h4>
+                <h4 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Top-tier accesories</h4>
                 <p class="text-gray-500 ">From chargers to headphones and much more we've got you covered.</p>
             </div>
         </div>
     </div>
 </div>
-<section class="lg:flex container items-center justify-center  mx-auto pt-16 ">
+<section class="flex container items-center justify-center  mx-auto pt-16 ">
 
 
-<a class=" hidden md:flex h-full hover:bg-neutral py-28 w-fit hover:cursor-pointer" (click)="owlCar.prev()"><i class="pi pi-angle-left text-5xl"></i></a>
-<owl-carousel-o class="w-[91%] " [options]="customOptions" #owlCar>
+<a class=" hidden md:flex h-full dark:hover:bg-neutral hover:bg-slate-300 py-28 w-fit hover:cursor-pointer" (click)="owlCar.prev()"><i class="pi pi-angle-left text-5xl"></i></a>
+<owl-carousel-o class="w-[90%] flex justify-center" [options]="customOptions" #owlCar>
 
     <ng-container  *ngFor="let slide of products">
-        <ng-template carouselSlide  >
-        <div class="relative max-w-[320px] min-w-[180px] rounded-3xl group p-2 my-3 cursor-pointer">
+        <ng-template carouselSlide class="" >
+        <div class="relative max-w-[320px] min-w-[290px] sm:min-w-[200px] rounded-3xl group p-2 my-3 cursor-pointer">
             <div class="overflow-x-hidden rounded-2xl relative">
                 <img class="h-48 rounded-2xl filter  group-hover:brightness-90 w-full object-cover"
                     src="https://pixahive.com/wp-content/uploads/2020/10/Gym-shoes-153180-pixahive.jpg">
@@ -84,7 +86,7 @@
             <div class="mt-4 pl-2 mb-2 dark:text-white flex justify-between ">
                 <div>
                     <p class="text-lg font-semibold  mb-0">{{slide.name}}</p>
-                    <p class="text-md text-gray-300 mt-0">{{slide.price}}</p>
+                    <p class="text-md  mt-0">{{slide.price}}</p>
                 </div>
                
             </div>
@@ -95,19 +97,19 @@
 </owl-carousel-o>
 
 
-<a class=" hidden md:flex hover:bg-neutral h-full py-28 w-fit hover:cursor-pointer" (click)="owlCar.next()"><i class="pi pi-angle-right text-5xl"></i></a>
+<a class=" hidden md:flex dark:hover:bg-neutral  hover:bg-slate-300 h-full py-28 w-fit  hover:cursor-pointer" (click)="owlCar.next()"><i class="pi pi-angle-right text-5xl"></i></a>
 </section>
 
 
 
-    <div class="mx-auto container px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="mx-auto container text-gray-900  dark:text-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div class="md:flex md:items-end md:justify-between">
             <div class="max-w-xl">
-                <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                <h2 class="text-4xl font-bold tracking-tight  sm:text-5xl">
                     Read trusted reviews from our customers
                 </h2>
 
-                <p class="mt-6 max-w-lg leading-relaxed text-gray-700">
+                <p class="mt-6 max-w-lg leading-relaxed text-gray-800 dark:text-gray-400">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus
                     sapiente commodi. Aliquid sunt tempore iste repellendus explicabo dignissimos placeat,
                     autem harum dolore reprehenderit quis! Quo totam dignissimos earum.
@@ -127,7 +129,7 @@
         </div>
 
         <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <blockquote class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8">
+            <blockquote class="flex h-full flex-col justify-between bg-base-100 p-6 shadow-sm sm:p-8">
                 <div>
                     <div class="flex gap-0.5 text-green-500">
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -159,7 +161,7 @@
                     <div class="mt-4">
                         <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
 
-                        <p class="mt-4 leading-relaxed text-gray-700">
+                        <p class="mt-4 leading-relaxed dark:text-gray-400 text-gray-800">
                             No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
                             know what? If we come across somebody with no arms or legs, do we bother resuscitating
                             them? I mean, what quality of life do we have there?
@@ -167,99 +169,99 @@
                     </div>
                 </div>
 
-                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                <footer class="mt-4 text-sm font-medium dark:text-gray-300 text-gray-700  sm:mt-6">
                     &mdash; Michael Scott
                 </footer>
             </blockquote>
 
-            <blockquote class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8">
+            <blockquote class="flex h-full flex-col justify-between bg-base-100 p-6 shadow-sm sm:p-8">
                 <div>
                     <div class="flex gap-0.5 text-green-500">
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-
+            
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-
+            
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-
+            
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-
+            
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </div>
-
+            
                     <div class="mt-4">
                         <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
-
-                        <p class="mt-4 leading-relaxed text-gray-700">
+            
+                        <p class="mt-4 leading-relaxed dark:text-gray-400 text-gray-800">
                             No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
                             know what? If we come across somebody with no arms or legs, do we bother resuscitating
                             them? I mean, what quality of life do we have there?
                         </p>
                     </div>
                 </div>
-
-                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+            
+                <footer class="mt-4 text-sm font-medium dark:text-gray-300 text-gray-700  sm:mt-6">
                     &mdash; Michael Scott
                 </footer>
             </blockquote>
 
-            <blockquote class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8">
-                <div>
-                    <div class="flex gap-0.5 text-green-500">
-                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-
-                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-
-                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-
-                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-
-                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                    </div>
-
-                    <div class="mt-4">
-                        <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
-
-                        <p class="mt-4 leading-relaxed text-gray-700">
-                            No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
-                            know what? If we come across somebody with no arms or legs, do we bother resuscitating
-                            them? I mean, what quality of life do we have there?
-                        </p>
-                    </div>
-                </div>
-
-                <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                    &mdash; Michael Scott
-                </footer>
-            </blockquote>
+    <blockquote class="flex h-full flex-col justify-between bg-base-100 p-6 shadow-sm sm:p-8">
+        <div>
+            <div class="flex gap-0.5 text-green-500">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+    
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+    
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+    
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+    
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+            </div>
+    
+            <div class="mt-4">
+                <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
+    
+                <p class="mt-4 leading-relaxed dark:text-gray-400 text-gray-800">
+                    No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
+                    know what? If we come across somebody with no arms or legs, do we bother resuscitating
+                    them? I mean, what quality of life do we have there?
+                </p>
+            </div>
+        </div>
+    
+        <footer class="mt-4 text-sm font-medium dark:text-gray-300 text-gray-700  sm:mt-6">
+            &mdash; Michael Scott
+        </footer>
+    </blockquote>
         </div>
     </div>
