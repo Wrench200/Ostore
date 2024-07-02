@@ -1,112 +1,130 @@
-<section class=" bg-banner1 bg-cover bg-blend-darken md:h-[70dvh] bg-black bg-opacity-40 bg-center">
+<section class="space-y-8 mt-[4.2rem] dark:bg-slate-800">
+    <section class=" bg-banner1 bg-cover bg-blend-darken h-fit bg-stone-900 bg-opacity-40 bg-center">
 
-    <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft"
-        class="relative mx-auto container px-4 py-32 sm:px-6 h-full md:flex md:items-center md:justify-start justify-center md:px-8 animation-duration-1000 animation-ease-in-out">
-        <div
-            class="w-full text-center flex flex-col justify-center items-center md:items-start md:text-left text-white ltr:sm:text-left rtl:sm:text-right">
-            <h1 class="flex text-3xl sm:text-6xl  text-center  font-extrabold items-center lg:text-7xl">
-                Welcome to
+        <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeoutleft"
+            class="relative mx-auto container px-4 py-24 sm:px-6 h-full md:flex md:items-center md:justify-start justify-center md:px-8 animation-duration-1000 animation-ease-in-out">
+            <div
+                class="w-full  flex flex-col justify-center items-center text-center text-white ltr:sm:text-left rtl:sm:text-right">
+                <h1 class="sm:flex text-4xl sm:text-6xl font-extrabold items-center lg:text-7xl">
+                    Welcome to
 
-                <p class="block font-extrabold ml-3 text-rose-600 ">Ostore</p>
-            </h1>
+                    <p class="block font-extrabold sm:ml-3 text-rose-500 ">Ostore</p>
+                </h1>
 
-            <p class="mt-4 w-full md:max-w-lg text-xl/relaxed">
-                Find the latest phones, laptops, and accessories at unbeatable prices.
-            </p>
+                <p class="mt-4 w-full md:max-w-lg text-xl/relaxed">
+                    Your one-stop shop for all things tech related
+                </p>
 
-            <div class="mt-8 flex flex-wrap md:justify-start justify-center gap-4 text-center">
-                <a href="#"
-                    class="mt-6 inline-flex shrink-0 items-center gap-2 bg-rose-600 rounded-full border border-rose-600 hover:border-white px-5 py-3 text-white transition hover:bg-white hover:text-slate-800 md:mt-0">
+
+                <a routerLink="/products" [queryParams]="{category: 'products'}"
+                    class="mt-6 inline-flex shrink-0 items-center gap-2 bg-rose-600 rounded-full border border-rose-600 hover:border-white px-5 py-3 text-white transition hover:bg-white hover:text-slate-800 ">
                     <span class="font-medium"> Shop Now </span>
-                
-                    
+
+
                 </a>
 
 
-            </div>
-        </div>
-    </div>
-</section>
-<div class="container  mx-auto   pt-16">
-    <div  pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright" class="  grid items-center  grid-cols-1 lg:grid-cols-3 gap-6 md:gap-2 justify-center duration-1000">
-        <div class=" rounded-lg px-3 py-6 flex lg:flex-col justify-center items-center gap-5">
-            <img src="assets/MacBook Pro.png" alt="Delivery" class=" w-32 h-32 sm:w-44 sm:h-44 object-contain">
-            <div class="lg:px-10 sm:px-8">
-                <h2 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Top-notch Laptops</h2>
-                <p class="text-gray-500 ">Power up your gaming or boost your productivity with our premium selection </p>
-            </div>
-        </div>
-        <div class=" rounded-lg px-3 py-6 flex flex-row  lg:flex-col-reverse   justify-center items-center gap-5">
-            <div class="lg:px-10 sm:px-8">
-                <h4 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Smart Phones</h4>
-                <p class="text-gray-500 ">From Pixels to IPhones to Samsungs we've got the perfect phone for you </p>
-            </div>
-            <img src="assets/phone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
-        </div>
-        <div class=" rounded-lg px-3 py-6 flex lg:flex-col flex-row justify-center items-center gap-5">
-            <img src="assets/headphone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
-            <div class="lg:px-10 sm:px-8">
-                <h4 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Top-tier accesories</h4>
-                <p class="text-gray-500 ">From chargers to headphones and much more we've got you covered.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<section class="flex container items-center justify-center  mx-auto pt-16 ">
 
+            </div>
 
-<a class=" hidden md:flex h-full dark:hover:bg-neutral hover:bg-slate-300 py-28 w-fit hover:cursor-pointer" (click)="owlCar.prev()"><i class="pi pi-angle-left text-5xl"></i></a>
-<owl-carousel-o class="w-[90%] flex justify-center" [options]="customOptions" #owlCar>
-
-    <ng-container  *ngFor="let slide of products">
-        <ng-template carouselSlide class="" >
-        <div class="relative max-w-[320px] min-w-[200px]  rounded-3xl group p-2 my-3 cursor-pointer">
-            <div class="overflow-x-hidden rounded-2xl relative">
-                <img class="h-48 rounded-2xl filter  group-hover:brightness-90 w-full object-cover"
-                    src="https://pixahive.com/wp-content/uploads/2020/10/Gym-shoes-153180-pixahive.jpg">
-                <div
-                    class="absolute lg:-right-16 bottom-20 mr-5 mb-4 space-y-2 transition-all duration-300 right-0  lg:group-hover:right-0">
-                    <a
-                        class="flex h-10 w-10 items-center justify-center shadow-sm bg-slate-800 dark:bg-base-100 rounded-full text-base-100 dark:text-white transition hover:text-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <a
-                         class="flex h-10 w-10 items-center justify-center shadow-sm bg-slate-800 dark:bg-base-100 rounded-full text-base-100 dark:text-white transition hover:text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" class=" h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path
-                                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                        </svg>
-                    </a>
+        </div>
+        
+    </section>
+    <section class="container  mx-auto   pt-16">
+        <div pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeoutright"
+            class="  grid items-center  grid-cols-1 lg:grid-cols-3 gap-4  justify-start duration-1000">
+            <div class=" rounded-lg px-3  flex lg:flex-col justify-center items-center gap-5">
+                <img src="assets/MacBook Pro.png" alt="Delivery" class=" w-32 h-32 sm:w-44 sm:h-44 object-contain">
+                <div class="lg:px-10 w-2/4 lg:w-full sm:px-8">
+                    <h2 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Top-notch Laptops</h2>
+                    <p class="text-gray-500 ">Power up your gaming or boost your productivity with our premium selection
+                    </p>
                 </div>
             </div>
-            <div class="mt-4 pl-2 mb-2 dark:text-white flex justify-between ">
-                <div>
-                    <p class="text-lg font-semibold  mb-0">{{slide.name}}</p>
-                    <p class="text-md  mt-0">{{slide.price}}</p>
+            <div class=" rounded-lg px-3 flex flex-row  lg:flex-col-reverse   justify-center items-center gap-5">
+                <div class="lg:px-10 w-2/4 lg:w-full sm:px-8">
+                    <h4 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Smart Phones</h4>
+                    <p class="text-gray-500 ">From Pixels to IPhones to Samsungs we've got the perfect phone for you
+                    </p>
                 </div>
-               
+                <img src="assets/phone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
+            </div>
+            <div class=" rounded-lg px-3 flex lg:flex-col flex-row justify-center items-center gap-5">
+                <img src="assets/headphone.png" alt="Delivery" class="sm:w-44 sm:h-44 w-32 h-32 object-contain">
+                <div class="lg:px-10 w-2/4 lg:w-full sm:px-8">
+                    <h4 class="font-medium text-gray-900  dark:text-white capitalize text-xl">Top-tier accesories</h4>
+                    <p class="text-gray-500 ">From chargers to headphones and much more we've got you covered.</p>
+                </div>
             </div>
         </div>
-        </ng-template>
-    </ng-container>
+    </section>
+    <section class=" container text-gray-900  dark:text-white  mx-auto pt-16 ">
+        <h2 class="text-4xl font-bold tracking-tight px-8 py-8 text-left sm:text-5xl ">
+            Latest Products
+        </h2>
 
-</owl-carousel-o>
+        <div class="flex  items-center justify-center">
+            <a class=" hidden md:flex h-full dark:hover:bg-slate-700 hover:bg-slate-300 py-32 w-fit hover:cursor-pointer"
+                (click)="owlCar.prev()"><i class="pi pi-angle-left text-5xl "></i></a>
+            <owl-carousel-o class="w-[90%] flex justify-center" [options]="customOptions" #owlCar>
+
+                <ng-container *ngFor="let slide of products">
+                    <ng-template carouselSlide class="">
+                        <div
+                            class="relative max-w-[250px]  mx-auto min-w-[200px]  rounded-md dark:border-gray-800 dark:border-2 bg-gray-100 dark:bg-slate-700 dark:bg-neutral group p-2 my-3 cursor-pointer">
+                            <div class="overflow-x-hidden rounded-2xl relative">
+                                <img class=" rounded-2xl h-48 filter  group-hover:brightness-90 w-full object-contain"
+                                    src="{{slide.images[0]}}">
+
+                                <div
+                                    class="absolute lg:-right-16 bottom-20 mr-5 mb-4 space-y-2 transition-all duration-300 right-0  lg:group-hover:right-0">
+                                    <a (click)="addfav(slide._id)"
+                                        class="flex h-10 w-10 items-center justify-center shadow-sm bg-slate-800  rounded-full  text-white transition hover:text-red-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <a (click)="addToCart(slide.pname,slide._id,slide.price,slide.images[0],1)"
+                                        class="flex h-10 w-10 items-center justify-center shadow-sm bg-slate-800  rounded-full  text-white transition hover:text-blue-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class=" h-5 w-5" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path
+                                                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-4 pl-2 mb-2 dark:text-white flex justify-between ">
+                                <div>
+                                    <p class="text-lg font-semibold capitalize mb-0">{{slide.pname}}</p>
+                                    <p class="text-md  mt-0">{{slide.price + ' ' + 'XAF'}}</p>
+                                </div>
+                                <div>
+                                    <a routerLink="/prod/{{slide._id}}"
+                                        class="bg-slate-900 font-semibold hover:bg-slate-950 text-white py-2 px-4 rounded-lg">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+
+            </owl-carousel-o>
 
 
-<a class=" hidden md:flex dark:hover:bg-neutral  hover:bg-slate-300 h-full py-28 w-fit  hover:cursor-pointer" (click)="owlCar.next()"><i class="pi pi-angle-right text-5xl"></i></a>
-</section>
+            <a class=" hidden md:flex dark:hover:bg-slate-700 hover:bg-slate-300 h-full py-32 w-fit  hover:cursor-pointer"
+                (click)="owlCar.next()"><i class="pi pi-angle-right text-5xl"></i></a>
+        </div>
+    </section>
 
 
-
-    <div class="mx-auto container text-gray-900  dark:text-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section class="mx-auto container text-gray-900  dark:text-white py-12  lg:py-16">
         <div class="md:flex md:items-end md:justify-between">
-            <div class="max-w-xl">
-                <h2 class="text-4xl font-bold tracking-tight  sm:text-5xl">
-                    Read trusted reviews from our customers
+            <div class="px-8">
+                <h2 class="text-4xl font-bold  lg:text-left tracking-tight  sm:text-5xl">
+                    Don't just take our word for it
                 </h2>
 
                 <p class="mt-6 max-w-lg leading-relaxed text-gray-800 dark:text-gray-400">
@@ -114,18 +132,18 @@
                     sapiente commodi. Aliquid sunt tempore iste repellendus explicabo dignissimos placeat,
                     autem harum dolore reprehenderit quis! Quo totam dignissimos earum.
                 </p>
+                <a href="#"
+                    class="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full border border-rose-600 px-5 py-3 text-rose-600 transition hover:bg-rose-600 hover:text-white ">
+                    <span class="font-medium"> Read all reviews </span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4 rtl:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
             </div>
 
-            <a href="#"
-                class="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full border border-rose-600 px-5 py-3 text-rose-600 transition hover:bg-rose-600 hover:text-white md:mt-0">
-                <span class="font-medium"> Read all reviews </span>
-
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-4 rtl:rotate-180" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-            </a>
         </div>
 
         <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -181,31 +199,31 @@
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-            
+
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-            
+
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-            
+
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-            
+
                         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </div>
-            
+
                     <div class="mt-4">
                         <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
-            
+
                         <p class="mt-4 leading-relaxed dark:text-gray-400 text-gray-800">
                             No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
                             know what? If we come across somebody with no arms or legs, do we bother resuscitating
@@ -213,55 +231,80 @@
                         </p>
                     </div>
                 </div>
-            
+
                 <footer class="mt-4 text-sm font-medium dark:text-gray-300 text-gray-700  sm:mt-6">
                     &mdash; Michael Scott
                 </footer>
             </blockquote>
 
-    <blockquote class="flex h-full flex-col justify-between bg-base-100 p-6 shadow-sm sm:p-8">
-        <div>
-            <div class="flex gap-0.5 text-green-500">
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-    
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-    
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-    
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-    
-                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-            </div>
-    
-            <div class="mt-4">
-                <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
-    
-                <p class="mt-4 leading-relaxed dark:text-gray-400 text-gray-800">
-                    No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
-                    know what? If we come across somebody with no arms or legs, do we bother resuscitating
-                    them? I mean, what quality of life do we have there?
-                </p>
-            </div>
+            <blockquote class="flex h-full flex-col justify-between bg-base-100 p-6 shadow-sm sm:p-8">
+                <div>
+                    <div class="flex gap-0.5 text-green-500">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
+
+                        <p class="mt-4 leading-relaxed dark:text-gray-400 text-gray-800">
+                            No, Rose, they are not breathing. And they have no arms or legs … Where are they? You
+                            know what? If we come across somebody with no arms or legs, do we bother resuscitating
+                            them? I mean, what quality of life do we have there?
+                        </p>
+                    </div>
+                </div>
+
+                <footer class="mt-4 text-sm font-medium dark:text-gray-300 text-gray-700  sm:mt-6">
+                    &mdash; Michael Scott
+                </footer>
+            </blockquote>
         </div>
-    
-        <footer class="mt-4 text-sm font-medium dark:text-gray-300 text-gray-700  sm:mt-6">
-            &mdash; Michael Scott
-        </footer>
-    </blockquote>
-        </div>
+
+    </section>
+<div [ngClass]="success == false ? 'hidden' : 'flex'" tabindex="-1" id="toast-success"
+    class="flex absolute left-[40%] z-50 bottom-[10%] items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    role="alert">
+    <div
+        class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+        </svg>
+        <span class="sr-only">Check icon</span>
     </div>
+    <div class="ms-3 text-sm font-normal">{{successMessage}}</div>
+    <button type="button"
+        class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+        data-dismiss-target="#toast-success" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+        </svg>
+    </button>
+</div>
+</section>
